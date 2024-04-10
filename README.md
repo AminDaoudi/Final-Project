@@ -24,5 +24,5 @@ Our final system for milestone one will be a second domain controller to allow f
 > For the second link look in the bottom of the page for the header that says "Join the Domain"
 
 ### Working with DNS
-In order to make our systems resolve on LAN, forward and reverse lookup zones should be configured through the DNS manager on the Management machine. Use the following resource for instructions: [Adding forward and reverse zones in DNS Manager]()
+In order to make our systems resolve on LAN, forward and reverse lookup zones should be configured through the DNS manager on the Management machine. Use the following resource for instructions: [Adding forward and reverse zones in DNS Manager](https://github.com/AminDaoudi/Final-Project/wiki/DNS)
 
