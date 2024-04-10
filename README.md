@@ -7,3 +7,4 @@ First we configure firewall
 
 [Managment Config](https://github.com/AminDaoudi/Final-Project/wiki/mgmt1)
 
+[Second Domain Controller (gui Through MGMT)](https://github.com/AminDaoudi/Final-Project/wiki/dc2)
