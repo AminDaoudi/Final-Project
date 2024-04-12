@@ -1,0 +1,48 @@
+@startuml Milestone 1 Network Diagram
+skinparam backgroundColor ##F0F0F0
+
+nwdiag {
+    
+    network WAN {
+        address = 10.0.17.0/24
+        description = "Champlain Wide Area Network"
+
+        // define group
+        group firewall {
+            color = "#FF0000";
+            fw01 [address = ".102", description = "PFSense Firewall \nHostname: fw01 "]
+            description = "This is the connection \npoint between my LAN \nand the WAN network"
+
+        }
+    }
+    network LAN {
+        address = 172.16.1.0/24
+        description = "This is our group LAN network"
+        fw01 [address = ".2"]
+
+        // define group
+        group workstations {
+            description = "Workstations or regular network users"
+            color = "#0078D7";
+            wks01 [address = ".100", description = "Windows Worstation \nStatic IP \nHostname: wks01 \nDomain group.local"]
+            wks02 [address = ".101", description = "Windows Worstation \nstatic IP \nHostname: wks02 \nDomain group.local"]
+        }
+        // define group
+        group domain_controllers {
+            description = "Redundant domain controllers for active directory"
+            color = "#00FF00";
+            dc01 [address = ".12", description = "Domain Controller \nstatic IP \nHostname: dc01 \nDomain group.local"]
+            dc02 [address = ".13", description = "Domain Controller \nstatic IP \nHostname: dc02 \nDomain: group.local"]
+
+        }
+        // define group 
+        group managment_systems {
+            description = "Managment systes offer a GUI \nfor managing windows servers"
+            color = "#FFA500";
+            mgmt01 [description = "Server Management System \nStatic IP \nHostname: mgmt01 \nDomain: group.local"]
+        }
+    }
+    
+}
+
+@enduml
