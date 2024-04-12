@@ -26,5 +26,9 @@ Our final system for milestone one will be a second domain controller to allow f
 ### Working with DNS
 In order to make our systems resolve on LAN, forward and reverse lookup zones should be configured through the DNS manager on the Management machine. Use the following resource for instructions: [Adding forward and reverse zones in DNS Manager](https://github.com/AminDaoudi/Final-Project/wiki/DNS)
 
-Link to Network Diagram: [Network Diagram](https://github.com/AminDaoudi/Final-Project/blob/main/Final%20Diagram.PNG)
-Linot to working RVTM: [RVTM](https://docs.google.com/spreadsheets/d/1KhqYi3terW8qqHJKnAM7JFWo6KX1WyqVdzzuYNLLT-Q/edit?usp=sharing)
+
+ * Link to Network Diagram: [network Diagram](https://github.com/AminDaoudi/Final-Project/blob/main/milestone1_diagram.png)
+   
+ * Network Diagram RAW: [Milestone1.plantuml](https://github.com/AminDaoudi/Final-Project/blob/main/milestone1_diagram.plantuml)
+   
+ * Link to working RVTM: [RVTM](https://docs.google.com/spreadsheets/d/1KhqYi3terW8qqHJKnAM7JFWo6KX1WyqVdzzuYNLLT-Q/edit?usp=sharing)
