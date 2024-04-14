@@ -31,4 +31,4 @@ In order to make our systems resolve on LAN, forward and reverse lookup zones sh
    
  * Network Diagram RAW: [Milestone1.plantuml](https://github.com/AminDaoudi/Final-Project/blob/main/milestone1_diagram.plantuml)
    
- * Link to working RVTM: [RVTM](https://docs.google.com/spreadsheets/d/1KhqYi3terW8qqHJKnAM7JFWo6KX1WyqVdzzuYNLLT-Q/edit?usp=sharing)
+ * Link to working RVTM: [RVTM](https://github.com/AminDaoudi/Final-Project/wiki/Wiki-&-RVTM)
