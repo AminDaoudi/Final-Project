@@ -8,27 +8,18 @@ In this project we will be building a network in a virtual enviroment. This is p
 
  # Working Network Diagram
  ![Working Diagram](<Images/Working Network Diagram.png>)
+ > Created using plantuml -> [Working Diagram](milestone1_diagram.plantuml)
  
- ## Roles and Services
- Each system has a unique role in the environment that will be outlined below.
+ ## Role and Service Information
+Summary 
 
- ### Firewall 
-  * The firewall is running PFSense and will act as the connection between the LAN and WAN networks. 
+ * Firewall -> 1x PFSense Firewall
+ * Domain Controllers -> 2x Domain Controllers
+ * Workstations -> 2x Workstations (Domain Joined)
+ * Management Systems -> 1x Windows Server Manager, 1x Linux Server Manager
+ * DHCP systems -> 2x DHCP Servers 
+ * File Systems -> 2x Windows DFS
+> **All systems can be controlled via Ansible from MGMT02 except for the following: [wks01](https://github.com/AminDaoudi/Final-Project/wiki/w1), [wks02](https://github.com/AminDaoudi/Final-Project/wiki/w2), and [fw01](https://github.com/AminDaoudi/Final-Project/wiki/fw)**
 
- ### Domain Controllers
-  * Domain Controllers manage Active Directory services, these systems are redundant so if one fails, the other can pick up where it left off. 
-
- ### Workstations
-  * Workstations are the windows clients of the network, they are domain joined and can be managed through active directory (WKS1, WKS2).
-
- ### Management Systems
-  * Both the DC1 and DC2 are running windows server core. MGMT01 offers a GUI solution for managing windows systems on the network through Windows Server Manager GUI.
-  * MGMT02 picks up the role of managing Linux systems on the network.
-
- ### DHCP Servers
- * This network deploys two DHCP servers to manage DHCP services. DHCP01 is the main dhcp server while DHCP2 is the secondary server. In the event of an outage, either server can run without connection to the other.
-
- ### File Systems
-  * More on this section in milestone 3
-
- ### 
+ ## RVTM and Deliverables
+  * RVTM can be found here: [RVTM](https://github.com/AminDaoudi/Final-Project/wiki/RVTM)
