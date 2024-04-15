@@ -1,4 +1,4 @@
-@startuml Milestone 1 Network Diagram
+@startuml Working Network Diagram
 skinparam backgroundColor ##F0F0F0
 
 nwdiag {
@@ -24,22 +24,37 @@ nwdiag {
         group workstations {
             description = "Workstations or regular network users"
             color = "#0078D7";
-            wks01 [address = ".100", description = "Windows Worstation \nStatic IP \nHostname: wks01 \nDomain group.local"]
-            wks02 [address = ".101", description = "Windows Worstation \nstatic IP \nHostname: wks02 \nDomain group.local"]
+            wks01 [address = ".100", description = "Windows Worstation \nDHCP Assigned \nHostname: wks01 \nDomain group.local \nServices: False"]
+            wks02 [address = ".101", description = "Windows Worstation \nDHCP Assigned \nHostname: wks02 \nDomain group.local \nServices: False"]
         }
         // define group
-        group domain_controllers {
+        group domaincontrollers {
             description = "Redundant domain controllers for active directory"
             color = "#00FF00";
-            dc01 [address = ".12", description = "Domain Controller \nstatic IP \nHostname: dc01 \nDomain group.local"]
-            dc02 [address = ".13", description = "Domain Controller \nstatic IP \nHostname: dc02 \nDomain: group.local"]
+            dc01 [address = ".12", description = "Domain Controller \nstatic IP \nHostname: dc01 \nDomain: group.local \nServices: Active Directory, DNS"]
+            dc02 [address = ".13", description = "Domain Controller \nstatic IP \nHostname: dc02 \nDomain: group.local \nServices: Active Directory, DNS"]
 
         }
         // define group 
-        group managment_systems {
-            description = "Managment systes offer a GUI \nfor managing windows servers"
+        group managmentsystems {
+            description = "Managment systes offer a centralised way \nto manage servers"
             color = "#FFA500";
-            mgmt01 [description = "Server Management System \nStatic IP \nHostname: mgmt01 \nDomain: group.local"]
+            mgmt01 [address = ".14", description = "Server Management System \nStatic IP \nHostname: mgmt01 \nDomain: group.local \nServices: Windows Managment Features"]
+            mgmt02 [address = ".16", description = "Server Management System \nStatic IP \nHostname: mgmt02 \nDomain: Not Joined \nServices: Ansible Controller"]
+        }
+        // define group
+        group dhcpsystems {
+            description = "DHCP systems offer a way for new systems \nto connect to \nthe LAN"
+            color = "#0074D9";
+            dhcp01 [address = ".10", description = "Primary DHCP Server \nStatic IP \nHostname: dhcp01 \nDomain: Not Joined \nServices: Primary DHCP, Ansible Node"]
+            dhcp02 [address = ".11", description = "Secondary DHCP Server \nStatic IP \nHostname: dhcp02 \nDomain: Not Joined \nServices: Secondary DHCP, Ansible node"]
+
+        }
+        // define group 
+        group util {
+            description = "Util system for application \ndeployment Via ansible"
+            color = "#2ECC71";
+            util01 [address = ".15", description = "Util Server server for \nApplication deployment \nHostname: util01: \nDomain: group.local \nServices: NGINX, Ansible node"]
         }
     }
     
