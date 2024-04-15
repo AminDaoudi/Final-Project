@@ -7,4 +7,4 @@ In this project we will be building a network in a virtual enviroment. This is p
  * [Firewall](https://github.com/AminDaoudi/Final-Project/wiki/fw)
 
  # Working Network Diagram
- ![Working Diagram](Working Network Diagram.png)
+ ![Working Diagram](https://github.com/AminDaoudi/Final-Project/blob/main/Working%20Network%20Diagram.png)
