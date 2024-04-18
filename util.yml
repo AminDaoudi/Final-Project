@@ -8,9 +8,9 @@
         state: latest
 
     - name: Install nginx
-    yum:
-      name: nginx
-      state: latest
+      yum:
+        name: nginx
+        state: latest
 
     - name: Start nginx
       service:
@@ -19,7 +19,7 @@
 
     - name: Add firewall rule for port 80
       firewalld:
-        port: 80
+        port: 80/tcp
         permanent: yes
         state: enabled
     
