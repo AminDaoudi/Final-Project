@@ -63,6 +63,15 @@ nwdiag {
             color = "#2ECC71";
             util01 [address = ".15", description = "Util Server server for \nApplication deployment \nHostname: util01: \nDomain: group.local \nServices: NGINX, Ansible node \nOS: Centos7 Core"]
         }
+        // define group
+        group dfs {
+            description = "Dfs systems make up the distributed file systems on the \nLAN"
+            color = "#decf31";
+            dfs01 [address =".21", description = "DFS server \nDomain: group.local \nServices: DFS \nOS: Windows Core"]
+            dfs02 [address =".22", description = "DFS server \nDomain: group.local \nServices: DFS \nOS: Windows Core"]
+
+
+        }
     }
 
     
