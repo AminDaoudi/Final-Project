@@ -15,7 +15,7 @@ nwdiag {
 
         }
     }
-    network LAN {
+    network LAN1 {
         address = 172.16.1.0/24
         description = "This is our group LAN network"
         fw01 [address = ".2"]
@@ -50,6 +50,13 @@ nwdiag {
             dhcp02 [address = ".11", description = "Secondary DHCP Server \nStatic IP \nHostname: dhcp02 \nDomain: Not Joined \nServices: Secondary DHCP, Ansible Node \nOS: Centos7 Core"]
 
         }
+        
+    }
+    network LAN2 {
+        address = 172.16.1.0/24
+        description = "Continuation of the LAN network"
+
+
         // define group 
         group util {
             description = "Util system for application \ndeployment Via ansible"
@@ -57,6 +64,7 @@ nwdiag {
             util01 [address = ".15", description = "Util Server server for \nApplication deployment \nHostname: util01: \nDomain: group.local \nServices: NGINX, Ansible node \nOS: Centos7 Core"]
         }
     }
+
     
 }
 
