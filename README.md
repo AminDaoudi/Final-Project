@@ -1,5 +1,5 @@
 # SYS-265 Final Project
-In this project we will be building a network in a virtual enviroment. This is page serves as a layout of our process, each system will have build documentation that is linked here as well as in the Wiki.
+In this project we will be building a network in a virtual enviroment. This is page serves as a layout of our build process, each system will have build documentation that is linked here as well as in the Wiki.
 
 ## Table of Contents
  * [Linux Systems](https://github.com/AminDaoudi/Final-Project/wiki/Linux-Systems)
