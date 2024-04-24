@@ -12,7 +12,7 @@
         name: nginx
         state: latest
 
-    - name: Start nginx
+    - name: Starts nginx
       service:
         name: nginx
         state: started
@@ -23,6 +23,6 @@
         permanent: yes
         state: enabled
     
-    - name: Reload firewall
+    - name: Reloads the firewall
       command: firewall-cmd --reload
     
