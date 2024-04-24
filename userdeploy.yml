@@ -1,0 +1,16 @@
+---
+- name: Create Domain User
+  hosts: dc01
+  tasks:
+    - name: Deployer A Domain User
+      microsoft.ad.user:
+        identity: deployer
+        firstname: deployer
+        password: ********
+        state: present
+        groups:
+          set:
+          - Domain Users
+        domain_username: groupadmin-adm
+        domain_password: **************
+
