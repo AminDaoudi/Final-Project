@@ -11,7 +11,7 @@ In this project we will be building a network in a virtual enviroment. This is p
  > Created using plantuml -> [Working Diagram](milestone1_diagram.plantuml)
  
  ## Role and Service Information
-Summary 
+Summary: 
 
  * Firewall -> 1x PFSense Firewall
  * Domain Controllers -> 2x Domain Controllers
