@@ -2,7 +2,7 @@
 - name: Create Domain User
   hosts: dc01
   tasks:
-    - name: Deployer A Domain User
+    - name: Deploy A Domain User
       microsoft.ad.user:
         identity: <username_for_user>
         firstname: <name_of_user>
