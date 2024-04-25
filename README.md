@@ -8,7 +8,7 @@ In this project we will be building a network in a virtual enviroment. This is p
 
  # Working Network Diagram
  ![Working Diagram](<Images/Working Network Diagram.png>)
- > Created using plantuml -> [Working Diagram](milestone1_diagram.plantuml)
+ > Created using plantuml -> [Working Diagram](Working_Network_Diagram.plantuml)
  
  ## Role and Service Information
 Summary: 
