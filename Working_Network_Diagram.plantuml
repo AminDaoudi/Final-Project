@@ -1,0 +1,89 @@
+@startuml Working Network Diagram
+skinparam backgroundColor ##F0F0F0
+
+nwdiag {
+    
+    network WAN {
+        address = 10.0.17.0/24
+        description = "Champlain Wide Area Network"
+
+        // define group
+        group firewall {
+            color = "#FF0000";
+            fw01 [address = ".102", description = "PFSense Firewall \nHostname: fw01 "]
+            description = "This is the connection \npoint between my LAN \nand the WAN network"
+
+        }
+    }
+
+    network LAN1 {
+        address = 172.16.1.0/24
+        description = "This is our group LAN network"
+        fw01 [address = ".2"]
+
+        // define group
+        group workstations {
+            description = "Workstations or regular network users"
+            color = "#0078D7";
+            wks01 [address = ".100", description = "Windows Worstation \nDHCP Assigned \nHostname: wks01 \nDomain group.local \nServices: False \nOS: Windows Client"]
+            wks02 [address = ".101", description = "Windows Worstation \nDHCP Assigned \nHostname: wks02 \nDomain group.local \nServices: False \nOS: Windows Client"]
+        }
+        // define group
+        group domaincontrollers {
+            description = "Redundant domain controllers for active directory"
+            color = "#00FF00";
+            dc01 [address = ".12", description = "Domain Controller \nstatic IP \nHostname: dc01 \nDomain: group.local \nServices: Active Directory, DNS \nOS: Windows Core"]
+            dc02 [address = ".13", description = "Domain Controller \nstatic IP \nHostname: dc02 \nDomain: group.local \nServices: Active Directory, DNS \nOS: Windows Core"]
+
+        }
+        // define group 
+        group managmentsystems {
+            description = "Managment systes offer a centralised way \nto manage servers"
+            color = "#FFA500";
+            mgmt01 [address = ".14", description = "Server Management System \nStatic IP \nHostname: mgmt01 \nDomain: group.local \nServices: Windows Managment Features \nOS: Windows Server GUI"]
+            mgmt02 [address = ".16", description = "Server Management System \nStatic IP \nHostname: mgmt02 \nDomain: Not Joined \nServices: Ansible Controller \nOS: Ubuntu Server Core"]
+        }
+        
+    }
+    network LAN2 {
+        address = 172.16.1.0/24
+        description = "Continuation of the LAN network"
+        wks01 [address = ".100"]
+        wks02 [address = ".101"]
+        dc01 [address = ".12"]
+        dc02 [address = ".13"]
+        mgmt01 [address = ".14"]
+        mgmt02 [address = ".16"]
+
+
+
+        // define group
+        group dhcpsystems {
+            description = "DHCP systems offer a way for new systems \nto connect to \nthe LAN"
+            color = "#8A2BE2";
+            dhcp01 [address = ".10", description = "Primary DHCP Server \nStatic IP \nHostname: dhcp01 \nDomain: Not Joined \nServices: Primary DHCP, Ansible Node \nOS: Centos7 Core"]
+            dhcp02 [address = ".11", description = "Secondary DHCP Server \nStatic IP \nHostname: dhcp02 \nDomain: Not Joined \nServices: Secondary DHCP, Ansible Node \nOS: Centos7 Core"]
+
+        }
+
+        // define group 
+        group util {
+            description = "Util system for application \ndeployment Via ansible"
+            color = "#2ECC71";
+            util01 [address = ".15", description = "Util Server server for \nApplication deployment \nHostname: util01: \nDomain: group.local \nServices: NGINX, Ansible node \nOS: Centos7 Core"]
+        }
+        // define group
+        group dfs {
+            description = "Dfs systems make up the distributed file systems on the \nLAN"
+            color = "#decf31";
+            dfs01 [address =".21", description = "DFS server \nDomain: group.local \nServices: DFS \nOS: Windows Core"]
+            dfs02 [address =".22", description = "DFS server \nDomain: group.local \nServices: DFS \nOS: Windows Core"]
+
+
+        }
+    }
+
+    
+}
+
+@enduml
