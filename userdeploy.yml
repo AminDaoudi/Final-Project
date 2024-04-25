@@ -4,13 +4,13 @@
   tasks:
     - name: Deployer A Domain User
       microsoft.ad.user:
-        identity: deployer
-        firstname: deployer
-        password: ********
+        identity: <username_for_user>
+        firstname: <name_of_user>
+        password: <password_for_user>
         state: present
         groups:
           set:
           - Domain Users
-        domain_username: groupadmin-adm
-        domain_password: **************
+        domain_username: <domain_admin_username>
+        domain_password: <domain_admin_password>
 
