@@ -1,0 +1,9 @@
+---
+- name: Add a local SSH User
+  hosts: mgmt02
+  tasks:
+    - name: Deploy a linux ssh user to the local system
+      ansible.builtin.user
+        name: remoteuser
+        shell: /bin/bash
+      become: True
