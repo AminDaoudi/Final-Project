@@ -1,0 +1,17 @@
+---
+- hosts: util
+  tasks:
+    - name: Install Nmap on Debian based systems
+      apt:
+        name: namp
+        state: latest
+      become: true
+      when: ansible_os_family == "Debian"
+
+    - name: Install Nmap on RHEL based systems
+      yum:
+        name: nmap
+        state: latest
+      become: true
+      when: ansible_os_family == "RedHat"
+

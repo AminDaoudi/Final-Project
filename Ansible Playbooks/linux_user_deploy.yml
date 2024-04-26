@@ -1,0 +1,10 @@
+---
+- name: Deploy a Local Linux User
+  hosts: <desired_host>
+  become: true
+  tasks: 
+    - name: Deploy a linux user to the local machine
+      ansible.builtin.user:
+        name: <new_user_name>
+        shell: /bin/bash
+        password: "{{ '<new_user_password> | password_hash('sha512') }}"
