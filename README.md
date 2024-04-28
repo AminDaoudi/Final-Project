@@ -13,7 +13,7 @@ In this project we will be building a network in a virtual enviroment. This is p
  * [Milestone 3](<Images/Working Network Diagram.png>)
 
  # Working Network Diagram
- ![Working Diagram](<Images/Working Network Diagram.png>)
+ ![Working Diagram](image.png)
  > Created using plantuml -> [Working Diagram](Working_Network_Diagram.plantuml)
  
  ## Role and Service Information
